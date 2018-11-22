@@ -5,6 +5,16 @@
     <title>Display Image</title>
 </head>
 <body>
+
+<h1>Specified the image filename in html file</h1>
+
 <img src="{{url_for('static', filename='images/ILoveProgramming.JPG')}}" />
+
+<h1>Pass the image filenames from python to html</h1>
+{% for image in imageList %}
+    <img src="{{url_for('static', filename='images/' + image)}}" />
+    <br>
+{% endfor %}
+
 </body>
 </html>
